@@ -1,1 +1,33 @@
-<p>navbar works!</p>
+ <!-- Versione Desktop -->
+
+ <mat-toolbar class="navbar-desktop" >
+    <div class="navbar-container">
+        <span class="navbar-title">My app</span>
+        <div >
+            <a mat-button  href="/home#sezione1">Sezione 1</a>
+            <a mat-button  href="/home#sezione2">Sezione 2</a>
+            <a mat-button routerLink="/listing" routerLinkActive="active">Pagina di listing</a>
+            <a mat-button routerLink="/favorites" routerLinkActive="active">Preferiti</a> <!-- Aggiungi questo link -->
+            <a mat-button (click)="logout()">Logout</a> <!-- Aggiungi il link per il logout -->
+        </div>
+        <span class="navbar-greeting">Ciao, utente loggato</span>
+    </div>
+  </mat-toolbar>
+
+ <!-- Versione Mobile -->
+<mat-toolbar class="navbar-mobile" >
+    <mat-toolbar-row>
+      <span class="navbar-title">My app</span>
+      <span class="example-spacer"></span>
+      <button mat-icon-button class="menu-icon" [matMenuTriggerFor]="menu" aria-label="Menu">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu"  >
+        <a mat-menu-item href="/home#sezione1">Sezione 1</a>
+        <a mat-menu-item href="/home#sezione2">Sezione 2</a>
+        <a mat-menu-item routerLink="/listing" routerLinkActive="active">Pagina di listing</a>
+        <a mat-menu-item routerLink="/favorites" routerLinkActive="active">Preferiti</a>
+        <a mat-menu-item (click)="logout()">Logout</a>
+      </mat-menu>
+    </mat-toolbar-row>
+  </mat-toolbar>
