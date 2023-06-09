@@ -1,1 +1,8 @@
-<p>character-detail works!</p>
+<p>details works!</p>
+<div *ngIf="item">
+    <h2>{{ item.name }}</h2>
+    <img [src]="item.imageUrl" alt="Item Image">
+    <p>{{ item.description }}</p>
+    <button (click)="addToFavorites(item)">Aggiungi ai preferiti</button>
+  </div>
+  

@@ -1,0 +1,21 @@
+
+$primary-color: #007bff;
+
+
+.details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item-name {
+  font-size: 18px;
+  color: $primary-color;
+}
+
+.item-description {
+  font-size: 15px;
+  color: #333;
+}
+
+
