@@ -28,7 +28,6 @@ export class FavoritePageComponent implements OnInit {
   removeFromFavorites(characterId: number) {
     this.favoriteService.removeFavoriteCharacter(characterId);
   
-    // Aggiorna l'array dei personaggi preferiti nella pagina
     this.favoriteCharacters = this.favoriteCharacters.filter(character => character.id !== characterId);
   }
   

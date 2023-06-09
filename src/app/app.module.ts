@@ -25,8 +25,9 @@ import { ListingPageComponent } from './listing-page/listing-page.component';
 import { HomeComponent } from './home/home.component';
 import { MatIconModule } from '@angular/material/icon';
 import { FavoriteService } from '../app/favorite.service';
-
 import { HttpClientModule } from '@angular/common/http';
+import { AuthGuard } from './auth.guard';
+
 
 @NgModule({
   declarations: [
@@ -56,7 +57,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
 
   ],
-  providers: [FavoriteService],
+  providers: [FavoriteService,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -29,11 +29,11 @@ export class CharacterDetailComponent implements OnInit {
     this.getCharacterDetails(this.CharacterId);
     this.isFavorite = this.favoriteService.isCharacterFavorite(this.CharacterId);
 
-    const user = localStorage.getItem('user');
-    if (!user) {
-      // Non è presente un utente nel localStorage, reindirizza alla pagina di accesso
-      this.router.navigate(['/404']);
-    }
+    // const user = localStorage.getItem('user');
+    // if (!user) {
+    //   // Non è presente un utente nel localStorage, reindirizza alla pagina di accesso
+    //   this.router.navigate(['/404']);
+    // }
   }
 
   getCharacterDetails(characterId: number) {
@@ -46,23 +46,7 @@ export class CharacterDetailComponent implements OnInit {
 
   
 
-  // toggleFavorite() {
-  //   const favorites: number[] = JSON.parse(localStorage.getItem('favorites') || '[]');
-  //   const characterId = this.CharacterId;
-  //   const index = favorites.indexOf(characterId);
-  
-  //   if (index !== -1) {
-  //     favorites.splice(index, 1);
-  //     this.favoriteService.removeFavoriteCharacter(characterId);
-  //   } else {
-  //     favorites.push(characterId);
-  //     const characterToAdd = { id: characterId, name: this.Character.name, description: this.Character.description, image: this.Character.image };
-  //     this.favoriteService.addFavoriteCharacter(characterToAdd);
-  //   }
 
-  //   localStorage.setItem('favorites', JSON.stringify(favorites));
-  //   this.isFavorite = !this.isFavorite;
-  // }
   toggleFavorite() {
     const characterId = this.CharacterId;
     if (this.isFavorite) {

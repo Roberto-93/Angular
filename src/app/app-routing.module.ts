@@ -7,6 +7,7 @@ import { ListingPageComponent } from './listing-page/listing-page.component';
 import { CharacterDetailComponent } from './character-detail/character-detail.component';
 import { FavoritePageComponent } from './favorite-page/favorite-page.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -14,16 +15,17 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
+    canActivate: [AuthGuard],
 
     children: [
-      { path: 'sezione1', component: HomeComponent},
-      { path: 'sezione2', component: HomeComponent},
+      { path: 'sezione1', component: HomeComponent,canActivate: [AuthGuard]},
+      { path: 'sezione2', component: HomeComponent,canActivate: [AuthGuard]},
 
 ]
 },
-{path: 'listing', component: ListingPageComponent},
-{ path: 'Character/:id', component: CharacterDetailComponent },
-  { path: 'favorites', component: FavoritePageComponent  },
+{path: 'listing', component: ListingPageComponent,canActivate: [AuthGuard]},
+{ path: 'Character/:id', component: CharacterDetailComponent,canActivate: [AuthGuard] },
+  { path: 'favorites', component: FavoritePageComponent,canActivate: [AuthGuard]  },
   { path: '404', component: PageNotFoundComponent }, // Aggiungi questa rotta per la pagina 404
   { path: '**', redirectTo: '/404' } // Reindirizza tutte le altre rotte non definite alla pagina 404
   
