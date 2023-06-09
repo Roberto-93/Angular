@@ -67,6 +67,10 @@ export class ListingPageComponent implements OnInit {
   onImageMouseLeave(character: any) {
     character.isImageHovered = false;
   }
+  goToCharacterDetails(CharacterId: number) {
+    // Naviga alla pagina di dettaglio del personaggio utilizzando l'ID del personaggio
+    this.router.navigate(['/Character', CharacterId]);
+  }
 
 }
 

@@ -23,8 +23,10 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ListingPageComponent } from './listing-page/listing-page.component';
 import { HomeComponent } from './home/home.component';
-
 import { MatIconModule } from '@angular/material/icon';
+import { FavoriteService } from '../app/favorite.service';
+
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,8 @@ import { MatIconModule } from '@angular/material/icon';
     NavbarComponent,
     PageNotFoundComponent,
     ListingPageComponent,
-    HomeComponent
+    HomeComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -49,9 +52,11 @@ import { MatIconModule } from '@angular/material/icon';
     MatFormFieldModule,
     MatMenuModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule,
+
   ],
-  providers: [],
+  providers: [FavoriteService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
