@@ -9,6 +9,7 @@ import { FavoritePageComponent } from './favorite-page/favorite-page.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ListingPageComponent } from './listing-page/listing-page.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     FavoritePageComponent,
     FooterComponent,
     NavbarComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ListingPageComponent
   ],
   imports: [
     BrowserModule,
