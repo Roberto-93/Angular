@@ -1,0 +1,15 @@
+.element {
+    transform: translate(50px, 50px) rotate(45deg);
+  }
+
+  .overflow-container {
+    overflow-y: scroll;
+  }
+  
+  .overflow-container::-webkit-scrollbar {
+    width: 0px;
+  }
+  
+  .overflow-container::-webkit-scrollbar-track {
+    background: transparent; 
+  }

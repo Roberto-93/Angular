@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import {LoginComponent} from './login/login.component';
 import { HomeComponent } from './home/home.component';
+import { ListingPageComponent } from './listing-page/listing-page.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -15,8 +16,9 @@ const routes: Routes = [
       { path: 'sezione1', component: HomeComponent },
       { path: 'sezione2', component: HomeComponent },
 
-    ]
-  },
+]
+},
+{path: 'listing', component: ListingPageComponent},
   
 ];
 
