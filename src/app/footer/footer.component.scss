@@ -11,3 +11,13 @@
   footer a:hover{
     color: #439A86;
   }
+  .footer-center{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  p{
+    color: #FFD54F;
+    margin: 1rem;
+  }

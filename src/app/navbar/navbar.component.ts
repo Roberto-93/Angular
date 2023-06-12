@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent {
 
-constructor(private router: Router) { }
+constructor(public router: Router) { }
 logout() {
     // Rimuovi i dati utente dal localStorage
     localStorage.removeItem('user');  

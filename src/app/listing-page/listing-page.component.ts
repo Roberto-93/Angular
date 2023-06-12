@@ -21,18 +21,10 @@ export class ListingPageComponent implements OnInit {
     private router: Router, 
     ) { }
 
-  // ngOnInit() {
-  //   this.fetchCharacters();
-  // }
+  
 
   ngOnInit() {
-    // const user = localStorage.getItem('user');
-    // if (!user) {
-    //   this.router.navigate(['/404']);
-    // } else {
       this.fetchCharacters();
-      // this.filteredCharacters = this.characters;
-//       }
     }
 
   fetchCharacters() {

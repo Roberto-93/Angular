@@ -26,8 +26,8 @@ const routes: Routes = [
 {path: 'listing', component: ListingPageComponent,canActivate: [AuthGuard]},
 { path: 'Character/:id', component: CharacterDetailComponent,canActivate: [AuthGuard] },
   { path: 'favorites', component: FavoritePageComponent,canActivate: [AuthGuard]  },
-  { path: '404', component: PageNotFoundComponent }, // Aggiungi questa rotta per la pagina 404
-  { path: '**', redirectTo: '/404' } // Reindirizza tutte le altre rotte non definite alla pagina 404
+  { path: '404', component: PageNotFoundComponent }, 
+  { path: '**', redirectTo: '/404' } 
   
 ];
 

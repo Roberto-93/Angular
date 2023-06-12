@@ -21,19 +21,12 @@ export class CharacterDetailComponent implements OnInit {
     private router: Router,
     private http: HttpClient,
     private favoriteService: FavoriteService
-
     ) { }
 
   ngOnInit() {
     this.CharacterId = this.route.snapshot.params['id'];
     this.getCharacterDetails(this.CharacterId);
     this.isFavorite = this.favoriteService.isCharacterFavorite(this.CharacterId);
-
-    // const user = localStorage.getItem('user');
-    // if (!user) {
-    //   // Non è presente un utente nel localStorage, reindirizza alla pagina di accesso
-    //   this.router.navigate(['/404']);
-    // }
   }
 
   getCharacterDetails(characterId: number) {

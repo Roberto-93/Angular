@@ -8,17 +8,11 @@ import { Router } from '@angular/router';
 })
 
 
-export class HomeComponent implements OnInit {
+export class HomeComponent  {
 
 
-  constructor(private router: Router) { }
+  constructor( router: Router) { }
 
-  ngOnInit() {
-//     const user = localStorage.getItem('user');
-//     if (!user) {
-//       // Non è presente un utente nel localStorage, reindirizza alla pagina di accesso
-//       this.router.navigate(['/404']);
-//     }
-  }
+ 
 
 }

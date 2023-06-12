@@ -1,4 +1,10 @@
 <!-- Footer -->
-<footer>
-    <a href="/home#navbar">Torna su</a>
-  </footer>
+<footer *ngIf="!(router.url === '/login' || router.url ==='/404')">
+    
+  <div class="footer-center">
+    <p>Informazioni di contatto:</p>
+    <p>Indirizzo: Via Example, 12345 Città, Stato</p>
+    <p>Email: info@example.com</p>
+    <p>Telefono: 123-4567890</p>
+  </div>
+</footer>
