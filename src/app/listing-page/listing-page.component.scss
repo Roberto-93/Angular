@@ -13,3 +13,19 @@
   .overflow-container::-webkit-scrollbar-track {
     background: transparent; 
   }
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #A5D6A7;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    
+    border: 3px solid #FFD54F;
+  
+    mat-icon {
+      color: black;
+  }
+  }

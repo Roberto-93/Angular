@@ -1,20 +1,21 @@
 
-   
-<div class="navigation" style="padding-top:10px">
+<div class="container">
+<div class="navigation" style="padding-top:10px;" >
   <a routerLink="/listing">
-    <mat-icon style="color:black;margin-left: 20px;">arrow_back</mat-icon>
+    <mat-icon style="color:black;">arrow_back</mat-icon>
   </a>
 </div>
 
-<h1 >Dettaglio dell'Character</h1>
+
 
 <div class="container-character"  *ngIf="Character">
+  <h1 style="font-family: cursive; margin-top: 20px;" >Dettaglio del personaggio</h1>
   <img [src]="Character.image" [alt]="Character.name" style="border-radius: 30% !important;">
   <h2>{{ Character.name }}</h2>
   <p>status:{{ Character.status }}</p>
   <p>species:{{ Character.species }}</p>
   <p>gender:{{ Character.gender }}</p>
-  <p>Origin: {{ Character.origin.name }}</p> <!-- Aggiungi questa riga per visualizzare il campo "name" dell'oggetto "origin" -->
+  <p>Origin: {{ Character.origin.name }}</p> 
   <p>location:{{ Character.location.name }}</p>
 
   <div style="display: flex;
@@ -32,7 +33,8 @@
   <button mat-raised-button 
   style="background-color: #222E50!important;
   color: #E9D985;"  
-  routerLink="/favorites">Vai ai Preferiti</button> <!-- Aggiungi questo bottone -->
+  routerLink="/favorites">Vai ai preferiti</button> 
 </div>
 </div>
+</div> 
 

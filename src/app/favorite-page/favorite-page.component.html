@@ -1,20 +1,16 @@
 
-
+<div class="container" style="height: 100vh;">
 <h1>Pagina dei Preferiti</h1>
 <div class="navigation" style="width: 100%;">
-    <a routerLink="/home">
-      <mat-icon style="color:black;">arrow_back</mat-icon>
+    <a routerLink="/listing">
+      <mat-icon style="color:#000000;">arrow_back</mat-icon>
     </a>
-
 </div>
-<div style="    display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-height: 100vh;
-">
-<div style="padding: 1rem; max-width: 15rem;" *ngFor="let favoriteCharacter of favoriteCharacters">
+<div class="c1" >
+<div class="card-image" style="padding: 1rem; max-width: 15rem; height: 300px;" *ngFor="let favoriteCharacter of favoriteCharacters">
   <img style="width: 11rem;" [src]="favoriteCharacter.image" [alt]="favoriteCharacter.name">
   <h2 style="width: 11rem;">{{ favoriteCharacter.name }}</h2>
-  <button mat-raised-button (click)="removeFromFavorites(favoriteCharacter.id)" style="background-color: #222E50!important;color: #E9D985;">Rimuovi dai Preferiti</button>
+  <button mat-raised-button (click)="removeFromFavorites(favoriteCharacter.id)" style="border-radius: 70px; background-color: #222E50!important;color: #E9D985;">Rimuovi dai Preferiti</button>
+</div>
 </div>
 </div>
