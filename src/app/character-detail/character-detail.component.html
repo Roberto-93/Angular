@@ -1,40 +1,40 @@
 
 <div class="container">
-<div class="navigation" style="padding-top:10px;" >
-  <a routerLink="/listing">
-    <mat-icon style="color:black;">arrow_back</mat-icon>
-  </a>
-</div>
+  <div class="navigation" style="padding-top:10px;" >
+    <a routerLink="/listing">
+      <mat-icon style="color:black;">arrow_back</mat-icon>
+    </a>
+  </div>
 
 
 
-<div class="container-character"  *ngIf="Character">
-  <h1 style="font-family: cursive; margin-top: 20px;" >Dettaglio del personaggio</h1>
-  <img [src]="Character.image" [alt]="Character.name" style="border-radius: 30% !important;">
-  <h2>{{ Character.name }}</h2>
-  <p>status:{{ Character.status }}</p>
-  <p>species:{{ Character.species }}</p>
-  <p>gender:{{ Character.gender }}</p>
-  <p>Origin: {{ Character.origin.name }}</p> 
-  <p>location:{{ Character.location.name }}</p>
+  <div class="container-character"  *ngIf="Character">
+    <h1 style="font-family: cursive; margin-top: 20px;" >Dettaglio del personaggio</h1>
+    <img [src]="Character.image" [alt]="Character.name" style="border-radius: 30% !important;">
+    <h2>{{ Character.name }}</h2>
+    <p>status:{{ Character.status }}</p>
+    <p>species:{{ Character.species }}</p>
+    <p>gender:{{ Character.gender }}</p>
+    <p>Origin: {{ Character.origin.name }}</p> 
+    <p>location:{{ Character.location.name }}</p>
 
-  <div style="display: flex;
-  flex-wrap: wrap;
-  justify-content: center;">
-  <button mat-raised-button 
-  style="background-color: #222E50!important;
-  color: #E9D985;" 
-   [disabled]="isFavorite" 
-  (click)="toggleFavorite()"
-  [ngStyle]="{ 'opacity': isFavorite ? '0.5' : '1' }">
-    Aggiungi ai preferiti
-    <span *ngIf="isFavorite">✔</span>
-  </button>
-  <button mat-raised-button 
-  style="background-color: #222E50!important;
-  color: #E9D985;"  
-  routerLink="/favorites">Vai ai preferiti</button> 
-</div>
-</div>
+    <div style="display: flex;
+    flex-wrap: wrap;
+    justify-content: center;">
+    <button mat-raised-button 
+    style="background-color: #222E50!important;
+    color: #E9D985;" 
+    [disabled]="isFavorite" 
+    (click)="toggleFavorite()"
+    [ngStyle]="{ 'opacity': isFavorite ? '0.5' : '1' }">
+      Aggiungi ai preferiti
+      <span *ngIf="isFavorite">✔</span>
+    </button>
+    <button mat-raised-button 
+    style="background-color: #222E50!important;
+    color: #E9D985;"  
+    routerLink="/favorites">Vai ai preferiti</button> 
+  </div>
+  </div>
 </div> 
 

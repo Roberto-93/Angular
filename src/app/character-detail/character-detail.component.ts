@@ -42,9 +42,16 @@ export class CharacterDetailComponent implements OnInit {
 
   toggleFavorite() {
     const characterId = this.CharacterId;
-    if (this.isFavorite) {
-      this.favoriteService.removeFavoriteCharacter(characterId);
-    } else {
+    // if (this.isFavorite) {
+    //   this.favoriteService.removeFavoriteCharacter(characterId);
+    // } else {
+    //   const characterToAdd = { 
+    //     id: characterId, 
+    //     name: this.Character.name, 
+    //     description: this.Character.description, 
+    //     image: this.Character.image 
+    //   };
+    if (!this.isFavorite){
       const characterToAdd = { 
         id: characterId, 
         name: this.Character.name, 
